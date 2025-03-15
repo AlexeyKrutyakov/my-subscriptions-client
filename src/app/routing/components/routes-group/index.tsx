@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from 'react-router-dom';
 
-import { useAppSelector } from 'app/hooks';
-import { UserRole } from 'shared/types/common.types';
+import { useAppSelector } from '../../../../app/hooks/index';
+import { UserRole } from '../../../../shared/types/common.types';
 
 interface OnlyUnauthorizedRouteProps {
   onlyUnauthorized: boolean;
