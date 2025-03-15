@@ -34,3 +34,5 @@ export const userModel = createSlice({
     },
   },
 });
+
+export const { setUser } = userModel.actions;
