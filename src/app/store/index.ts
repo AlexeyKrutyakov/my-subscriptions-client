@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { userModel } from '../../entities/user/model/user';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    user: userModel.reducer,
+  },
   middleware: getDefaultMiddleware => getDefaultMiddleware(),
 });
 
