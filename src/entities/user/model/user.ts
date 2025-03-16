@@ -15,7 +15,7 @@ export type UserState = {
 
 const initialState: UserState = {
   _id: '',
-  role: null,
+  role: 'Client',
   data: null,
   isLoading: false,
   isFailed: false,
@@ -29,10 +29,13 @@ export const userModel = createSlice({
   name: 'user',
   initialState,
   reducers: {
+    setUserRole: (state, { payload }: PayloadAction<UserRole | null>) => {
+      state.role = payload;
+    },
     setUser: (state, { payload }: PayloadAction<User>) => {
       state.data = payload;
     },
   },
 });
 
-export const { setUser } = userModel.actions;
+export const { setUser, setUserRole } = userModel.actions;
