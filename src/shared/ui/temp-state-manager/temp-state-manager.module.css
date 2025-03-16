@@ -1,0 +1,11 @@
+.manager {
+  text-align: center;
+  background-color: gray;
+  border: 2px solid black;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
